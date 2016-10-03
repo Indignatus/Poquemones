@@ -1,7 +1,14 @@
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
+
 /**
  * Created by usu32 on 03/10/2016.
  */
-public class PokemonesAgua {
+
+
+
+public class PokemonesAgua extends Pokemon implements Capturable {
+
 
     private String tipus = "aigua";
     private String efectiuContre = "foc";
@@ -38,5 +45,20 @@ public class PokemonesAgua {
                 ", efectiuContre='" + efectiuContre + '\'' +
                 ", debilContre='" + debilContre + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean capturar() {
+
+
+        int randomNum = ThreadLocalRandom.current().nextInt(20, 120 + 1)- this.getDef();
+
+        if (randomNum >= this.getDef()){
+            return true;
+        }else{
+            return false;
+        }
+
+
     }
 }

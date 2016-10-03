@@ -4,7 +4,7 @@ import java.util.List;
 /**
  * Created by usu32 on 03/10/2016.
  */
-public class Pokemon {
+public class Pokemon  {
 
     private List<Pokemon> pokemonesList;
 

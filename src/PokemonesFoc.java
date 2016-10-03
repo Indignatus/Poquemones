@@ -1,7 +1,10 @@
+import java.util.concurrent.ThreadLocalRandom;
+
 /**
  * Created by usu32 on 03/10/2016.
  */
-public class PokemonesFoc {
+public class PokemonesFoc extends Pokemon
+        implements Capturable {
 
     private String tipus = "foc";
     private String efectiuContre = "planta";
@@ -38,5 +41,17 @@ public class PokemonesFoc {
                 ", efectiuContre='" + efectiuContre + '\'' +
                 ", debilContre='" + debilContre + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean capturar() {
+        int randomNum = ThreadLocalRandom.current().nextInt(20, 120 + 1)- this.getDef();
+
+        if (randomNum >= this.getDef()){
+            return true;
+        }else{
+            return false;
+        }
+
     }
 }

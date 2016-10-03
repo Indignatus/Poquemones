@@ -3,7 +3,7 @@
  */
 public interface Capturable {
 
-// prueba
+boolean capturar ();
 
 
 }
