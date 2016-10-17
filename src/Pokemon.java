@@ -4,7 +4,7 @@ import java.util.List;
 /**
  * Created by usu32 on 03/10/2016.
  */
-public class Pokemon  {
+public abstract class Pokemon implements Capturable  {
 
     private List<Pokemon> pokemonesList;
 
